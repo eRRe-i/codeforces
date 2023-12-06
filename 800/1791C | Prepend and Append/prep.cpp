@@ -25,7 +25,16 @@ void proc()
     string s;
     cin >> s;
 
-    for(int i=0, j=s.length()-1; 
+    for(int i=0, j=n-1; i<j; i++, j--) {
+//       cout << s[i] << " " << s[j] << " " << s[i] + s[j] << endl;
+        if(s[i] - '0' + s[j] - '0' == 1) { 
+            n = n-2;
+        } else {
+            break;
+        }
+    }
+
+    cout << n << endl;
 
     return;
 }
