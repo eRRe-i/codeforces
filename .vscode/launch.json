@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/leand/Documents/GitHub/codeforces/1999",
-      "program": "c:/Users/leand/Documents/GitHub/codeforces/1999/build/Debug/outDebug",
+      "cwd": "c:/Users/leand/Documents/GitHub/codeforces/800/118A _String Task",
+      "program": "c:/Users/leand/Documents/GitHub/codeforces/800/118A _String Task/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

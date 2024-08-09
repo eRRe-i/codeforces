@@ -1,12 +1,18 @@
-#include <iostream>
-#include <string>
+#include<iostream>
 
-int main () {
+using namespace std;
+int main() {
 
-  string n;
-  cin >> n; 
-  for (int i=n; i>0; i--) {
+  int a;
+  cin >> a;
 
+  for(int i=0; i < a; i++) {
+
+    int v;
+    cin >> v;
+
+    cout << int(v/10) + v%10 << endl;
   }
 
+  return 0;
 }

@@ -57,5 +57,17 @@
   "C_Cpp_Runner.useLeakSanitizer": false,
   "C_Cpp_Runner.showCompilationTime": false,
   "C_Cpp_Runner.useLinkTimeOptimization": false,
-  "C_Cpp_Runner.msvcSecureNoWarnings": false
+  "C_Cpp_Runner.msvcSecureNoWarnings": false,
+  "code-runner.languageIdToFileExtensionMap": {
+    "bat": ".bat",
+    "powershell": ".ps1",
+    "typescript": ".ts"
+  },
+  "C_Cpp.errorSquiggles": "enabled",
+  "files.associations": {
+    "cmath": "cpp",
+    "complex": "cpp",
+    "valarray": "cpp",
+    "random": "cpp"
+  }
 }
