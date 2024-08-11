@@ -16,7 +16,7 @@ const string ENDL = "\n";
 
 void solve() 
 {
- 
+
 }
  
 int main() {
