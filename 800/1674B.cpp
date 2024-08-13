@@ -1,6 +1,6 @@
 #include "bits/stdc++.h"
-// 
-// RATING - 
+//  1674B - Dictionary 
+//  RATING - 800
 using namespace std;
 
 #define forn(i, n) for (int i = 0; i < n; i++)
@@ -17,24 +17,23 @@ const string ENDL = "\n";
 
 void solve() 
 {
-	int n; cin >> n;
-	vi v(n, 0);
+ string s;
+ cin >> s;
+ int count = 0;
 
-	forn(i, n) {
-		cin >> v[i];
-	}
-	int count = 0, max = 0;
+ for(char i = 'a'; i < s[0]; i++) {
+	 count += 25;
+ }
 
-	if(n == 1) {
-		cout << 1 << endl;
-		return;
-	}
-	for(int i = 0; i< n-1; i++) {
-		if(v[i] == v[i+1]) count++;
-		else count = 0;
-		if(count > max) max  = count;
-	}
-	cout << max + 1 << endl;
+ count += s[1] - 'a' ;
+
+ if(s[1] < s[0]) {
+	count++;
+ }
+ 
+ cout << count << endl;
+
+
 }
  
 int main() {

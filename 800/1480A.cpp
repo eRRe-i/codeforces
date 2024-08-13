@@ -1,6 +1,6 @@
 #include "bits/stdc++.h"
-// 
-// RATING - 
+// 1480A - Yet Another String Game 
+// RATING - 800
 using namespace std;
 
 #define forn(i, n) for (int i = 0; i < n; i++)
@@ -17,24 +17,29 @@ const string ENDL = "\n";
 
 void solve() 
 {
-	int n; cin >> n;
-	vi v(n, 0);
+	string s; cin >> s;
+	bool turn = false;
 
-	forn(i, n) {
-		cin >> v[i];
+	forn(i, (int)s.size()) {
+		if(!turn) {
+			if(s[i]=='a') {
+				s[i] = 'b';
+				turn = !turn;
+			} else {
+				s[i] =  'a';
+				turn = !turn;
+			}
+		} else {
+			if(s[i]=='z') {
+				s[i] = 'y';
+				turn = !turn;
+			} else {
+				s[i] =  'z';
+				turn = !turn;
+			}
+		}
 	}
-	int count = 0, max = 0;
-
-	if(n == 1) {
-		cout << 1 << endl;
-		return;
-	}
-	for(int i = 0; i< n-1; i++) {
-		if(v[i] == v[i+1]) count++;
-		else count = 0;
-		if(count > max) max  = count;
-	}
-	cout << max + 1 << endl;
+	cout << s << endl;
 }
  
 int main() {

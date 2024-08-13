@@ -1,6 +1,6 @@
 #include "bits/stdc++.h"
-// 
-// RATING - 
+// 1478A - Nezzar and Colorful Balls 
+// RATING - 800
 using namespace std;
 
 #define forn(i, n) for (int i = 0; i < n; i++)

@@ -1,6 +1,6 @@
 #include "bits/stdc++.h"
-// 
-// RATING - 
+// 1312A - Two Regular Polygons 
+// RATING - 800
 using namespace std;
 
 #define forn(i, n) for (int i = 0; i < n; i++)
@@ -17,24 +17,16 @@ const string ENDL = "\n";
 
 void solve() 
 {
-	int n; cin >> n;
-	vi v(n, 0);
+	int m, n;
 
-	forn(i, n) {
-		cin >> v[i];
-	}
-	int count = 0, max = 0;
+	cin >> m >> n;
 
-	if(n == 1) {
-		cout << 1 << endl;
-		return;
+	if(m%n == 0) {
+		cout << "YES" << ENDL;
+	} else {
+		cout << "NO" << ENDL;
+
 	}
-	for(int i = 0; i< n-1; i++) {
-		if(v[i] == v[i+1]) count++;
-		else count = 0;
-		if(count > max) max  = count;
-	}
-	cout << max + 1 << endl;
 }
  
 int main() {

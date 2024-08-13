@@ -1,6 +1,6 @@
 #include "bits/stdc++.h"
-// 
-// RATING - 
+// 1562A - The Miracle and the Sleeper 
+// RATING - 800
 using namespace std;
 
 #define forn(i, n) for (int i = 0; i < n; i++)
@@ -17,24 +17,19 @@ const string ENDL = "\n";
 
 void solve() 
 {
-	int n; cin >> n;
-	vi v(n, 0);
+	int l, r; cin >> l >> r;
 
-	forn(i, n) {
-		cin >> v[i];
+	if(l == r) cout << 0 << endl;
+	else if( l <= r/2) {
+		if(r%2 == 0) {
+			cout << r/2 -1 << endl;
+		} else {
+			cout << (r+1)/2 -1 << endl;
+		}
 	}
-	int count = 0, max = 0;
-
-	if(n == 1) {
-		cout << 1 << endl;
-		return;
+	else {
+		cout << r%l << endl;
 	}
-	for(int i = 0; i< n-1; i++) {
-		if(v[i] == v[i+1]) count++;
-		else count = 0;
-		if(count > max) max  = count;
-	}
-	cout << max + 1 << endl;
 }
  
 int main() {

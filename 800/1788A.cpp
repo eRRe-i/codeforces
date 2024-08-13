@@ -1,6 +1,6 @@
 #include "bits/stdc++.h"
-// 
-// RATING - 
+// 1788A - One and Two 
+// RATING - 800
 using namespace std;
 
 #define forn(i, n) for (int i = 0; i < n; i++)
@@ -18,23 +18,35 @@ const string ENDL = "\n";
 void solve() 
 {
 	int n; cin >> n;
-	vi v(n, 0);
 
-	forn(i, n) {
+	vi v = vi(n, 0);
+	int count_two = 0;
+
+	forn(i,n) {
 		cin >> v[i];
+		if(v[i] == 2) count_two++;
 	}
-	int count = 0, max = 0;
 
-	if(n == 1) {
+
+	int output= 0;
+	if(count_two == 0) {
 		cout << 1 << endl;
-		return;
+	} else if (count_two %2 !=0 ) {
+		cout<< -1 << endl;
+	} else {
+		int ind = count_two/2;
+		int count = 0;
+		forn(i, n) {
+			if(v[i] == 2) {
+				count++;
+				if (count == ind) {
+					output = i+1;
+					break;
+				}
+			}
+		}
+		cout << output << endl;
 	}
-	for(int i = 0; i< n-1; i++) {
-		if(v[i] == v[i+1]) count++;
-		else count = 0;
-		if(count > max) max  = count;
-	}
-	cout << max + 1 << endl;
 }
  
 int main() {

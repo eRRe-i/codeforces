@@ -1,6 +1,6 @@
 #include "bits/stdc++.h"
-// 
-// RATING - 
+// 1003A - Polycarp's Pockets 
+// RATING - 800
 using namespace std;
 
 #define forn(i, n) for (int i = 0; i < n; i++)
@@ -23,17 +23,24 @@ void solve()
 	forn(i, n) {
 		cin >> v[i];
 	}
-	int count = 0, max = 0;
 
 	if(n == 1) {
 		cout << 1 << endl;
 		return;
 	}
-	for(int i = 0; i< n-1; i++) {
-		if(v[i] == v[i+1]) count++;
-		else count = 0;
-		if(count > max) max  = count;
+
+	sort(v.begin(), v.end());
+	int max = 0;
+	int count = 0;
+
+	for(int i=0; i< n-1; i++) {
+		if (v[i] == v[i+1]) {
+			count++;
+		} else count = 0;
+
+		if (count > max) max = count;
 	}
+
 	cout << max + 1 << endl;
 }
  
@@ -41,7 +48,7 @@ int main() {
 	ios_base :: sync_with_stdio(false);
 	cin.tie(0);
 	int t = 1;
-	cin >> t;
+	// cin >> t;
 	while(t--) solve();
  	return 0;
 }

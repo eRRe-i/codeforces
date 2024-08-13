@@ -1,6 +1,6 @@
 #include "bits/stdc++.h"
-// 
-// RATING - 
+// 1862B - Sequence Game 
+// RATING - 800
 using namespace std;
 
 #define forn(i, n) for (int i = 0; i < n; i++)
@@ -17,24 +17,31 @@ const string ENDL = "\n";
 
 void solve() 
 {
-	int n; cin >> n;
-	vi v(n, 0);
+	ull n;
+	cin >> n;
 
-	forn(i, n) {
+	vll v(n, 0);
+
+	for(ull i=0; i < n; i++) {
 		cin >> v[i];
 	}
-	int count = 0, max = 0;
+	ull final_n = n;
 
-	if(n == 1) {
-		cout << 1 << endl;
-		return;
+	for(ull i=1; i < n; i++){
+		if (v[i-1] > v[i]) {
+			final_n++;
+		}
+		
 	}
-	for(int i = 0; i< n-1; i++) {
-		if(v[i] == v[i+1]) count++;
-		else count = 0;
-		if(count > max) max  = count;
+	cout << final_n << endl;
+	cout << v[0] << " ";
+	for(ull i=1; i < n; i++){
+		if (v[i-1] > v[i]) {
+			cout << 1 << " ";
+		}
+		cout << v[i] << " ";
 	}
-	cout << max + 1 << endl;
+	cout << endl;
 }
  
 int main() {

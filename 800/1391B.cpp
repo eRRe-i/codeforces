@@ -1,6 +1,6 @@
 #include "bits/stdc++.h"
-// 
-// RATING - 
+// 1391B - Fix You 
+// RATING - 800
 using namespace std;
 
 #define forn(i, n) for (int i = 0; i < n; i++)
@@ -17,24 +17,22 @@ const string ENDL = "\n";
 
 void solve() 
 {
-	int n; cin >> n;
-	vi v(n, 0);
+int n, m;
+cin >> n >> m;
+char c;
+int count = 0;
 
-	forn(i, n) {
-		cin >> v[i];
-	}
-	int count = 0, max = 0;
+forn(i, n) {
+	forn(j, m) {
+		
+		cin >> c;
+		
+		if(i == n-1 && c == 'D') count ++;
+		if(j == m-1 && c == 'R') count ++;
 
-	if(n == 1) {
-		cout << 1 << endl;
-		return;
 	}
-	for(int i = 0; i< n-1; i++) {
-		if(v[i] == v[i+1]) count++;
-		else count = 0;
-		if(count > max) max  = count;
-	}
-	cout << max + 1 << endl;
+}
+cout << count << endl;
 }
  
 int main() {

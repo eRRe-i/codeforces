@@ -1,6 +1,6 @@
 #include "bits/stdc++.h"
-// 
-// RATING - 
+// 1569A - Balanced Substring 
+// RATING - 800
 using namespace std;
 
 #define forn(i, n) for (int i = 0; i < n; i++)
@@ -18,23 +18,21 @@ const string ENDL = "\n";
 void solve() 
 {
 	int n; cin >> n;
-	vi v(n, 0);
 
-	forn(i, n) {
-		cin >> v[i];
-	}
-	int count = 0, max = 0;
+	string s; cin >> s;
 
-	if(n == 1) {
-		cout << 1 << endl;
+	if (n == 1) {
+		cout << -1 << " " << -1 << endl;
 		return;
+	} else {
+		for(int i=0; i< n-1; i++) {
+			if(s[i] != s[i+1]) {
+				cout << i+1 << " " << i+1+1 << endl;
+				return;
+			}
+		}
 	}
-	for(int i = 0; i< n-1; i++) {
-		if(v[i] == v[i+1]) count++;
-		else count = 0;
-		if(count > max) max  = count;
-	}
-	cout << max + 1 << endl;
+	cout << -1 << " " << -1 << endl;
 }
  
 int main() {
