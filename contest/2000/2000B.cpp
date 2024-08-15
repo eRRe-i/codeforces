@@ -1,5 +1,5 @@
 #include "bits/stdc++.h"
-// 
+// 2000 - Seating in a Bus 
 // RATING - 
 using namespace std;
 
