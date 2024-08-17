@@ -46,15 +46,16 @@
                 "/usr/include",
                 "/usr/local/include",
                 "/usr/include/c++/11",
-                "/mnt/c/Users/leand/Documents/GitHub/codeforces",
-                "/usr/include/x86_64-linux-gnu/c++/11"
+                "/usr/include/x86_64-linux-gnu/c++/11",
+                "/mnt/c/Users/leand/Documents/GitHub/codeforces"
+                
                 
             ],
             "defines": [],
             "compilerPath": "",
             "cStandard": "c11",
             "cppStandard": "c++11",
-            "intelliSenseMode": "linux-gcc-x64",
+            "intelliSenseMode": "gcc-x64",
             "compilerArgs": [
                 "-std=c++11"
             ]

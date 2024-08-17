@@ -1,6 +1,6 @@
 #include "bits/stdc++.h"
-//
-// RATING - 
+// 1304A - Two Rabbits 
+// RATING - 800
 using namespace std;
 
 #define forn(i, n) for (int i = 0; i < n; i++)
@@ -10,7 +10,6 @@ using f64 = double;
 using ii = pair<int, int>;
 using ull = unsigned long long;
 using vi = vector<int>;
-using vd = vector<double>;
 using vii = vector<ii>;
 using vll = vector<ll>; 
 
@@ -18,8 +17,13 @@ const string ENDL = "\n";
 
 void solve() 
 {
-	
+	int a, b, c, d; cin >> a >> b >> c >> d;
 
+	if(abs(a-b) % (c+d) == 0) {
+		cout << abs(a-b) / (c+d) << endl;
+	} else {
+		cout << -1 << endl;
+	}
 }
  
 int main() {

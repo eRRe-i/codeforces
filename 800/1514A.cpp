@@ -1,6 +1,6 @@
 #include "bits/stdc++.h"
-//
-// RATING - 
+// 1514A - Perfectly Imperfect Array 
+// RATING - 800
 using namespace std;
 
 #define forn(i, n) for (int i = 0; i < n; i++)
@@ -18,8 +18,22 @@ const string ENDL = "\n";
 
 void solve() 
 {
-	
+	int n; cin >> n;
 
+	vd v(n,0);
+	bool flag = false;
+	int root;
+
+	forn(i, n) {
+		cin >> v[i];
+		root = round(sqrt(v[i]));
+		if (root * root !=  v[i]) flag = true; 
+	}
+
+	if (flag) cout << "YES" << ENDL;
+	else cout << "NO" << ENDL;
+
+	
 }
  
 int main() {

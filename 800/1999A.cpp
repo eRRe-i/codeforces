@@ -1,6 +1,6 @@
 #include<iostream>
 // 1999A - A+B Again?
-// RATING - 
+// RATING - 800
 using namespace std;
 int main() {
 
