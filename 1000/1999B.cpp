@@ -1,6 +1,6 @@
 #include "bits/stdc++.h"
 // 1999B - Card Game 
-// RATING - 
+// RATING - 1000
 using namespace std;
 
 #define forn(i, n) for (int i = 0; i < n; i++)

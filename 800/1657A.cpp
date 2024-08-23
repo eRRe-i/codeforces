@@ -1,5 +1,5 @@
 #include "bits/stdc++.h"
-//
+// 1657A - Integer Moves 
 // RATING - 800
 using namespace std;
 
@@ -19,7 +19,13 @@ const string ENDL = "\n";
 
 void solve() 
 {
-	
+	int x, y; cin >> x >> y;
+
+	if(x == 0 && y == 0) cout << 0 << endl;
+	else {
+		if (sqrt(x*x + y*y) - (int)sqrt(x*x+y*y) > 0) cout << 2 << endl;
+		else cout << 1 << endl;
+	}
 }
 
  

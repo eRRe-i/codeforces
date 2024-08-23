@@ -1,5 +1,5 @@
 #include "bits/stdc++.h"
-//
+// 1646A - Square Counting 
 // RATING - 800
 using namespace std;
 
@@ -13,15 +13,20 @@ using vi = vector<int>;
 using vd = vector<double>;
 using vii = vector<ii>;
 using vll = vector<ll>;
-using matrix = vector<vector<int>>;
+using matrix = vector<vector<char>>;
 
 const string ENDL = "\n";
 
 void solve() 
 {
+	ull n, sum; cin >> n >> sum;
+
+	ull power = n*n;
+
+	if(sum < power) cout << 0 << endl;
+	else cout << sum/power << endl;
 	
 }
-
  
 int main() {
 	ios_base :: sync_with_stdio(false);

@@ -1,5 +1,5 @@
 #include "bits/stdc++.h"
-//
+// 1699A - The Third Three Number Problem 
 // RATING - 800
 using namespace std;
 
@@ -19,7 +19,13 @@ const string ENDL = "\n";
 
 void solve() 
 {
-	
+	ull n; cin >> n;
+
+	if(n%2 == 0) {
+		cout << n/2 << " " << 0 << " " << n/2 << endl;
+	}else {
+		cout << -1 << endl;
+	}
 }
 
  

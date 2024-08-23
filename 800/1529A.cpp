@@ -19,7 +19,17 @@ const string ENDL = "\n";
 
 void solve() 
 {
-	
+	int n; cin >> n;
+	vi v(n, 0);
+	forn(i, n) {
+		cin >> v[i];
+	}
+	sort(v.begin(), v.end());
+	int count = 0;
+	forn(i, n) {
+		if(v[i] > v[0]) count++;
+	}
+	cout << count << endl;
 }
 
  

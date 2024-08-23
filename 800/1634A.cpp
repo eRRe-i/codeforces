@@ -1,5 +1,5 @@
 #include "bits/stdc++.h"
-//
+// 1634A - Reverse and Concatenate 
 // RATING - 800
 using namespace std;
 
@@ -19,7 +19,18 @@ const string ENDL = "\n";
 
 void solve() 
 {
-	
+	int n, k; cin >> n >> k;
+	string s; cin >> s;
+	bool ispal = true;
+
+	for(int i = 0, j = (int)s.length()-1; i < j; i++, j--) {
+		if(s[i] != s[j]) ispal = false;
+	}
+
+	if(ispal || k==0 ) cout << 1 << endl;
+	else cout << 2 << endl;
+
+
 }
 
  

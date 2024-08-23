@@ -1,5 +1,5 @@
 #include "bits/stdc++.h"
-//
+// 1747A - Two Groups 
 // RATING - 800
 using namespace std;
 
@@ -13,13 +13,22 @@ using vi = vector<int>;
 using vd = vector<double>;
 using vii = vector<ii>;
 using vll = vector<ll>;
-using matrix = vector<vector<int>>;
+using matrix = vector<vector<char>>;
 
 const string ENDL = "\n";
 
 void solve() 
 {
-	
+	int n; cin >> n;
+
+	ll value;
+	ll sum = 0;
+
+	forn(i, n) {
+		cin  >> value;
+		value > 0 ? sum += value : sum -= -value; 
+	}
+	cout << abs(sum) << endl;
 }
 
  

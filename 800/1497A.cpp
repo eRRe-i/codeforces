@@ -1,5 +1,5 @@
 #include "bits/stdc++.h"
-//
+// 1497A - Meximization 
 // RATING - 800
 using namespace std;
 
@@ -19,7 +19,39 @@ const string ENDL = "\n";
 
 void solve() 
 {
-	
+	int n; cin >> n;
+
+	vi v(n, 0);
+
+	forn(i, n) {
+		cin >> v[i];
+	}
+	sort(v.begin(), v.end());
+	vi result(n, -1);
+
+
+	forn(i, n) {
+		if(v[i] >= n) continue;
+		if(result[v[i]] == -1) {
+			result[v[i]] = v[i];
+			v[i] = -1;
+		}
+	}
+	forn(i, n) {
+		if(result[i] != -1) continue;
+		forn(j, n) {
+			if(v[j] != -1 && result[i] == -1) {
+				result[i] = v[j];
+				v[j] = -1;
+				break;
+			}
+		}
+	}
+
+	forn(i, n) {
+		cout << result[i] << " ";
+	}	
+	cout << endl;
 }
 
  
